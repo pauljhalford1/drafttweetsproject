@@ -11,7 +11,22 @@ and open the template in the editor.
     </head>
     <body>
         <?php
-        test
+        
+        // put full path to Smarty.class.php
+require('../Smarty/Smarty.class.php');
+$smarty = new Smarty();
+
+$smarty->setTemplateDir('../smarty/templates');
+$smarty->setCompileDir('../smarty/templates_c');
+$smarty->setCacheDir('../smarty/cache');
+$smarty->setConfigDir('../smarty/configs');
+
+$smarty->assign('name', 'Ned');
+
+
+
+// display template
+$smarty->display('index.tpl');
         ?>
     </body>
 </html>
