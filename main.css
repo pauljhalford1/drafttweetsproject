@@ -1,0 +1,54 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 15-Dec-2016, 09:05:51
+    Author     : Paul
+*/
+
+h1{
+    font-size: 20px;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+
+
+.input_boxes{
+    width: 280px;
+    height: 60px;
+}
+
+.input_div{
+    width: 320px;
+    height: 150px;
+    float: left;
+    border: 0px solid black;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.copytext{
+    font-size: 12px;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    float: left;
+    width: 33%;
+}
+.cleartext{
+    font-size: 12px;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    float: left;
+    width: 33%;
+}
+.charstext{
+    font-size: 12px;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    float: left;
+    width: 33%;
+    text-align: right;
+}
