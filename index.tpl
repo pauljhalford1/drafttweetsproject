@@ -33,7 +33,7 @@
     <h1>  </h1>
         <div>
 
-            <form name="f{$line}" id="mainForm" method="get" enctype="multipart/form-data" action="">{* need html spec characters *}
+            <form name="f{$line}" id="mainForm" method="POST" enctype="multipart/form-data" action="">{* need html spec characters *}
                 <input name="submit" type="submit" value="Submit"><br /><br />
                 {foreach $drafts_array as $line => $value}
                     <div class="input_div">
