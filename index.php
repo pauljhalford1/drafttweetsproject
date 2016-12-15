@@ -18,15 +18,15 @@
     }
 
 
-    if ($_SERVER["REQUEST_METHOD"] === "GET") {
+    if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
         $debug_info.="\nLine 23: method is get";
-        $debug_info.="\ni3 is ".$_GET[3];
+        $debug_info.="\ni3 is ".$_POST[3];
        
         foreach ($drafts_array as $key =>$value) {
              
            
-            $drafts_array[$key] = test_input($_GET[$key]);
+            $drafts_array[$key] = test_input($_POST[$key]);
                
                // echo $changed;
                     
@@ -47,7 +47,7 @@
 
 ?>
 
-
+ 
 <!DOCTYPE html>
 <html>
   
