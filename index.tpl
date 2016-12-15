@@ -30,7 +30,7 @@
         {$debug_info}
         --------------------------------------
     </pre>
-    <h1>Draft tweets</h1>
+    <h1>  </h1>
         <div>
 
             <form name="f{$line}" id="mainForm" method="get" enctype="multipart/form-data" action="">{* need html spec characters *}
