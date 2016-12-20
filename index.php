@@ -15,6 +15,11 @@
         $cookie = stripslashes($cookie);
         $drafts_array = json_decode($cookie);
         $debug_info.="\nLine 17: cookie is".$cookie;
+    } else {
+
+        $drafts_array =  array_fill(0, $total_drafts, "");
+
+
     }
 
 
@@ -36,14 +41,9 @@
         
         // assign array to cookie
         $array_to_put = json_encode($drafts_array);
-        setcookie('tweets_cookie', $array_to_put);
+        setcookie('tweets_cookie', $array_to_put, time()+(3600*24*7));
 
-    } else {
-
-        $drafts_array =  array_fill(0, $total_drafts, "");
-
-
-    }
+    } 
 
 ?>
 
@@ -63,7 +63,15 @@
 
 //chars
 foreach($drafts_array as $key => $value){
-    $chars[$key]=strlen($value);
+    $chars[$key]=140-(strlen($value));
+    preg_match_all("/(@\w+)/u", $value, $matches);  
+    $atchars=0;
+    if ($matches) {
+        foreach($matches[0] as $k => $v){
+            $atchars+=strlen($v);
+        }
+    }
+    $chars[$key]+=$atchars;
 }
    
       // echo $_SERVER["REQUEST_METHOD"];
